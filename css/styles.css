@@ -56,7 +56,7 @@ img {
 }
 @media screen and (min-width: 1128px) {
   .container {
-    max-width: 1128px;
+    max-width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -809,7 +809,8 @@ img {
 }
 @media only screen and (min-width: 768px) {
   .modal {
-    width: 408px;
+    width: calc(100% - 36px);
+    max-width: 408px;
     min-height: 584px;
     padding: 72px 24px 24px 24px;
   }
@@ -1017,6 +1018,8 @@ img {
   justify-content: center;
   align-items: center;
   margin-left: auto;
+  background-color: transparent;
+  border: transparent;
 }
 @media only screen and (min-width: 768px) {
   .menu-btn {
@@ -1031,6 +1034,8 @@ img {
 
   display: flex;
   flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
 
   width: 100%;
   height: 100%;
