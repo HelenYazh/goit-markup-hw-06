@@ -77,6 +77,19 @@ img {
   }
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* #region Header */
 .header-container {
   display: flex;
@@ -122,7 +135,6 @@ img {
 .header-nav {
   display: flex;
   align-items: center;
-  /* margin-right: auto; */
   flex-grow: 1;
 }
 
@@ -344,7 +356,6 @@ img {
   margin-bottom: 72px;
 }
 
-.factors-item,
 .team-item,
 .portfolio-item {
   color: #2e2f42;
@@ -353,6 +364,53 @@ img {
   line-height: 1.2;
   letter-spacing: 0.02em;
   margin-bottom: 8px;
+}
+
+/* #region factors */
+.factors-item {
+  color: #2e2f42;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  margin-bottom: 8px;
+}
+@media only screen and (min-width: 768px) {
+  .factors-item {
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 1128px) {
+  .factors-item {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+}
+
+.factors-text {
+  align-self: stretch;
+
+  width: 100%;
+  max-width: 288px;
+
+  color: #434455;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+@media only screen and (min-width: 768px) {
+  .factors-text {
+    max-width: 356px;
+  }
+}
+@media only screen and (min-width: 1228px) {
+  .factors-text {
+    font-weight: 400;
+  }
 }
 
 .factors-wrapper {
@@ -365,28 +423,29 @@ img {
   background-color: #f4f4fd;
   margin-bottom: 8px;
 }
-/* factors */
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+@media only screen and (max-width: 1127.98px) {
+  .factors-wrapper {
+    display: none;
+  }
 }
 
 .factors-items {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 72px 24px;
 }
 
-.factors-list {
-  width: calc((100% - 3 * 24px) / 4);
+@media only screen and (min-width: 768px) {
+  .factors-list {
+    width: calc((100% - 24px) / 2);
+  }
 }
+@media only screen and (min-width: 1128px) {
+  .factors-list {
+    width: calc((100% - 3 * 24px) / 4);
+  }
+}
+/* #endregion factors */
 
 /* team */
 .section-team {
